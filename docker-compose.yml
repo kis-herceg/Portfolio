@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+
+  # frontend:
+  #   build: ./frontend
+  #   container_name: frontend
+  #   ports:
+  #     - "3000:3000"
+  #   stdin_open: true
+  #   tty: true
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+    ports:
+      - '3306:3306'
+
+  # backend:
+  #   build: ./backend
+  #   container_name: backend
+  #   ports:
+  #     - '8080:8080'
+  #   stdin_open: true
+  #   tty: true
+
+  

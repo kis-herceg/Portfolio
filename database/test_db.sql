@@ -1,0 +1,13 @@
+CREATE DATABASE test;
+USE test;
+
+GRANT ALL PRIVILEGES ON test.* TO 'user'@'%';
+FLUSH PRIVILEGES;
+
+CREATE TABLE test(
+    id INT NOT NULL AUTO_INCREMENT,
+    testText VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO test (testText) VALUES ("test text");
