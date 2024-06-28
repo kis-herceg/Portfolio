@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BackendApplication {
 
-	@RequestMapping("/")
-	public @ResponseStatus String hello() {
-		return "Hello, World";
-	}
+//	@RequestMapping("/")
+//	public @ResponseStatus String hello() {
+//		return "Hello, World";
+//	}
 	
 	public static void main(String[] args) {
 		SpringApplication.run(BackendApplication.class, args);
