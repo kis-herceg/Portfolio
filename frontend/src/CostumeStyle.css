@@ -14,11 +14,11 @@ body {
 
 /* SWIPER */
 .swiper-pagination-bullet {
-  background-color: #00d9ff; /* Pontok háttérszíne */
+  background-color: #00d9ff;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #ff00ff; /* Aktív pont háttérszíne */
+  background-color: #ff00ff;
 }
 
 .section {
@@ -44,19 +44,6 @@ body {
   box-shadow: 0 -25px 0 0 rgb(24 24 27);
 }
 
-@media (max-width: 640) {
-  .invert-radius-rt::before {
-    display: none;
-  }
-
-  .invert-radius-lb-2::before {
-    display: none;
-  }
-
-  .invert-radius-lb::before {
-    display: none;
-  }
-}
 
 .invert-radius-rt::before {
   content: "";
@@ -94,11 +81,9 @@ body {
   box-sizing: border-box;
   color: #3B3B3B;
   cursor: pointer;
-  display: inline-block;
+  display: block; /* Változtatás inline-block-ról block-ra */
   font-size: 16px;
   font-weight: 600;
-  line-height: normal;
-  margin: 0;
   outline: none;
   padding: 10px 20px;
   text-align: center;
@@ -171,3 +156,40 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.text-gradient-2 {
+  background: -webkit-linear-gradient(45deg, #08AEEA, #2AF598);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  display: inline-block;
+  cursor: pointer;
+  padding-top: 2px;
+  user-select: none;
+}
+
+.nav-link:after {
+  display:block;
+  content: '';
+  width: inherit;
+  border-bottom: solid 2px rgb(99 102 241);  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+.nav-link:hover:after { transform: scaleX(1); }
+
+
+.box-shadow-max-pink {
+  box-shadow: 8px 8px 0px 0px rgb(234, 0, 255);
+}
+
+
+
+@media only screen and (max-width: 640px) {
+
+  .invert-radius-rt:before {
+    display: none;
+  }
+}

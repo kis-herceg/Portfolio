@@ -9,7 +9,9 @@ import { SiTailwindcss } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { FaDocker } from "react-icons/fa";
 import { DiMysql } from "react-icons/di";
-import TechCard from '../Technology/TechCard.tsx';
+import TechCard from '../UI/TechCard.tsx';
+import BlurBox from '../UI/BlurBox.tsx';
+import CostumeButton from '../UI/CostumeButton.tsx';
 
 const PortfolioGit = () => {
 
@@ -31,37 +33,30 @@ const PortfolioGit = () => {
 
 
   return (
-    <div className='section max-sm:px-0 dark:bg-zinc-900 flex max-xl:flex-col justify-between gap-5'>
-      <div className='w-3/5 max-xl:w-full'>
+    <div className='section max-sm:px-0 dark:bg-zinc-900 flex max-xl:flex-col justify-between gap-5 '>
+      <div className='w-3/5  max-xl:w-full max-sm:p-5'>
         <ConsoleBlock />
       </div>
-      <div className='w-2/5 flex flex-col h-full gap-2 max-xl:w-full '>
-      {/* bg-[#e8e8e8]  */}
-        <div className='w-full h-full p-4 border-[1px] border-[#aa30b1] dark:bg-fuchsia-900  bg-[#e8e8e8]  bg-contour-3-svg  bg-cover rounded-3xl shadow-xl' > 
-          <div className='backdrop-blur-sm dark:bg-zinc-700/20  rounded-3xl p-2 pb-16 dark:text-slate-50'>
-            <div className='flex justify-between content-center mb-2'>
-              <h2 className='text-2xl'>Porftólió projekt</h2>
-              <FaGithub size={35} />
-            </div>
-            <div className='mb-2'>
-              <p>Több másik projektem mellett ez a protfólió oldal is publikusan elérhető a GitHub profiliomon. Ezekkel tudom a legjobban szemlétetni a különböző megoldásokat és programozási nyelveket amiket használok. </p>
-
-            </div>
-            <div className='flex flex-wrap gap-2 mb-2 justify-center'>
-              {
-                techItems.map((tech, index) => 
-                  <TechCard key={index}
-                    platforms={tech.platforms}
-                    icon={tech.icon}
-                    name={tech.name}
-                  />
-                )
-              }
-            </div>
-            <div className='btn-1 float-start'>GitHub</div>
+      <div className='w-2/5 flex flex-col h-full gap-2 max-xl:w-full max-sm:p-5'>
+        <BlurBox css='bg-contour-4-svg border-[#0bbaba] dark:bg-fuchsia-900'>
+          <div className='flex justify-between content-center mb-2'>
+            <h2 className='text-2xl'>Porftólió projekt</h2>
+            <a href=""><FaGithub size={35} /></a>
           </div>
-        </div>
+          <div className='mb-2'>
+            <p>Több másik projektem mellett ez a protfólió oldal is publikusan elérhető a GitHub profiliomon. Ezekkel tudom a legjobban szemlétetni a különböző megoldásokat és programozási nyelveket amiket használok. </p>
 
+          </div>
+          <div className='flex flex-wrap gap-2 mb-2 justify-start'>
+            {
+              techItems.map((tech, index) => 
+                <div key={index} className='rounded-3xl dark:border-white border-black border-2 py-1 px-4 inline-block cursor-pointer select-none'>
+                  <p>{tech.name}</p>
+                </div>
+              )
+            }
+          </div>
+        </BlurBox>
       </div>
     </div>
   )

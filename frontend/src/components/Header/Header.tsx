@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
-
-import { MdDarkMode, MdOutlineEmail  } from "react-icons/md";
+import { Outlet, Link } from "react-router-dom";
+import { MdDarkMode  } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 
-const Header = () => {
+import { FaHouseChimney } from "react-icons/fa6";
 
+
+const Header = () => {
 
 
 // Light or Dark mode 
@@ -48,14 +50,13 @@ useEffect(() => {
 
 
   return (
-    <header className={`${visible ? 'transform translate-y-0' : 'transform -translate-y-full'} transition-transform transition-opacity duration-300 w-full h-16 flex items-center justify-around fixed z-50`}>
+    <header className={`${visible ? ' translate-y-0' : ' -translate-y-full'} transform transition-transform  duration-300 w-full h-16 flex items-center justify-around fixed z-50`}>
       <div className='cursor-pointer p-2 bg-zinc-700/60  backdrop-blur-md rounded-3xl text-white'>
-        <MdOutlineEmail size={24} />
+        <Link to={"/"}><FaHouseChimney size={24} /></Link>
       </div>
       <div className='flex flex-row gap-4 p-2 px-6 bg-zinc-700/60 backdrop-blur-md rounded-3xl text-white '>
-        <div className='cursor-pointer'>Me</div>
-        <div className='cursor-pointer'>Tech Skills</div>
-        <div className='cursor-pointer'>Contact</div>
+        <Link to={"/projects"}><div className='nav-link'>Projects</div></Link>
+        <Link to={"/contact"}><div className='nav-link'>Contact</div></Link>
       </div>
       <div className='cursor-pointer rounded-full bg-zinc-700/60 backdrop-blur-md p-2' onClick={handleThemeSwitch} >
         {

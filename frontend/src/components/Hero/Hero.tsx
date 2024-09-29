@@ -17,7 +17,7 @@ const Hero = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.4 }}
       >
-        <h1 className='mb-8 inline-block font-kanit lg:text-9xl md:text-7xl sm:text-5xl text-5xl font-black text-gradient-1'>Pausch Dániel</h1>
+        <h1 className='mb-8 inline-block font-kanit lg:text-9xl md:text-7xl sm:text-5xl text-5xl font-black text-gradient-1 p-5'>Pausch Dániel</h1>
       </motion.div>
       <motion.div className='h-full'
         initial={{ opacity: 0, y: 100 }}

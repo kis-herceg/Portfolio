@@ -15,8 +15,15 @@ module.exports = {
       backgroundImage: {
         'contour-svg': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/ContourLine2.svg')`,
         'contour-3-svg': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/ContourLine4.svg')`,
+        'contour-4-svg': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/blue.svg')`,
+        'svg-1-svg': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/quantum-gradient.svg')`,
+        'svg-2-svg': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/diamond-sunset.svg')`,
+        'svg-3-svg': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/subtle-prism.svg')`,
         'neon': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/neon.jpg')`,
         'neon-1': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/neon1.jpg')`,
+        'neon-2': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/neon2.jpg')`,
+        'neon-3': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/neon3.jpg')`,
+        'neon-4': `url('${process.env.REACT_APP_PUBLIC_URL}/assets/images/neon4.png')`
       },
     },
   },
